@@ -429,17 +429,17 @@ sub modifyPacketIn {
 		}
 	}
 
-	if ($switch eq "0069") {
-		use bytes; no encoding 'utf8';
+	if ($switch eq "0276") {
+        use bytes; no encoding 'utf8';
 
-		# queue the packet as requiring client's response in time
-		$self->{packetPending} = $msg;
-		
-		# Modify the server config'ed on Kore to point to proxy
-		my $accountInfo = substr($msg, 0, 47);
-		my $serverInfo = substr($msg, 47, length($msg));
-		my $newServers = '';
-		my $serverCount = 0;
+        # queue the packet as requiring client's response in time
+        $self->{packetPending} = $msg;
+        
+        # Modify the server config'ed on Kore to point to proxy
+        my $accountInfo = substr($msg, 0, 51);
+        my $serverInfo = substr($msg, 51, length($msg));
+        my $newServers = '';
+        my $serverCount = 0;
 		
 		my $msg_size = length($serverInfo);
 		debug "Modifying Account Info packet...";

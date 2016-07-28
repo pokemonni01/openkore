@@ -541,3 +541,20 @@ serverEncoding Western
 charBlockSize 112
 chatLangCode 0
 addTableFolders pserver/AegisRO;eA;kRO/RagexeRE_2010_07_14a;translated/kRO_english;kRO
+
+[RO-(exe)]
+ip 103.55.55.12
+port 6900
+master_version 7
+version 24
+serverType tRO
+secureLogin 3
+secureLogin_type 0
+secureLogin_account 0
+patchserver wpatch.ragnarok.in.th
+patchpath /patch70
+serverEncoding Thai
+addTableFolders tRO
+recvpackets recvpackets.txt
+charBlockSize 144
+gameguard 1

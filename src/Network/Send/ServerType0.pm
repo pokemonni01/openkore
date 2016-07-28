@@ -39,7 +39,7 @@ sub new {
 	my $self = $class->SUPER::new(@_);
 	
 	my %packets = (
-		'0064' => ['master_login', 'V Z24 Z24 C', [qw(version username password master_version)]],
+		'0A76' => ['master_login', 'V Z24 Z24 C', [qw(version username password master_version)]],
 		'0065' => ['game_login', 'a4 a4 a4 v C', [qw(accountID sessionID sessionID2 userLevel accountSex)]],
 		'0066' => ['char_login', 'C', [qw(slot)]],
 		'0067' => ['char_create'], # TODO
