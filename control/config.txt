@@ -3,12 +3,12 @@
 
 ######## Login options and server-specific options ########
 
-master Thailand - tRO Main server (Norse)
+master RO-(exe)
 server
 username pokemonni03
 password 92244727664
 loginPinCode
-char
+char 1
 
 # Poseidon Settings (http://wiki.openkore.com/index.php/PoseidonServer)
 # They must be the same as Query Server config in Poseidon.txt
@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword titwoses
+adminPassword brabrede
 callSign
 commandPrefix ;
 callSignGM 0
@@ -184,7 +184,7 @@ cartMaxWeight 7900
 itemsTakeAuto_new 0
 itemsTakeGreed 0
 
-lockMap
+lockMap prt_fild07
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -220,7 +220,7 @@ shopAuto_open 0
 shop_random 0
 shop_useSkill 1
 
-sitAuto_hp_lower 40
+sitAuto_hp_lower 20
 sitAuto_hp_upper 100
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
@@ -677,7 +677,7 @@ useSelf_item {
 	inLockOnly 0
 	notWhileSitting 0
 	notInTown 0
-	timeout
+	timeout 0
 	disabled 0
 	inInventory
 	manualAI 0
