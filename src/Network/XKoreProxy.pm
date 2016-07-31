@@ -430,16 +430,16 @@ sub modifyPacketIn {
 	}
 
 	if ($switch eq "0276") {
-        use bytes; no encoding 'utf8';
+		use bytes; no encoding 'utf8';
 
-        # queue the packet as requiring client's response in time
-        $self->{packetPending} = $msg;
-        
-        # Modify the server config'ed on Kore to point to proxy
-        my $accountInfo = substr($msg, 0, 51);
-        my $serverInfo = substr($msg, 51, length($msg));
-        my $newServers = '';
-        my $serverCount = 0;
+		# queue the packet as requiring client's response in time
+		$self->{packetPending} = $msg;
+		
+		# Modify the server config'ed on Kore to point to proxy
+		my $accountInfo = substr($msg, 0, 179);
+		my $serverInfo = substr($msg, 179, length($msg));
+		my $newServers = '';
+		my $serverCount = 0;
 		
 		my $msg_size = length($serverInfo);
 		debug "Modifying Account Info packet...";
@@ -473,7 +473,7 @@ sub modifyPacketIn {
 		$self->{packetPending} = $msg;
 		
 		# Proxy the Logon to Map server
-		debug "Modifying Map Logon packet...", "connection";
+		debug "Modifying Map Logon packet...\n", "connection";
 		my $logonInfo = substr($msg, 0, 22);
 		my @mapServer = unpack("x22 a4 v1", $msg);
 		my $mapIP = $mapServer[0];
